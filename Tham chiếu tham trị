@@ -1,0 +1,25 @@
+#include "stdio.h"
+//Truyền tham trị nghĩa là giá trị của biến không bị thay đổi bên ngoài hàm. Ví dụ như bạn bè     vay tiền mình cho vay nhưng nó không biết số  tiền trong ví là bao nhiêu
+void swap_thamtri(int a,int b){
+	int tam=a;
+	a=b;
+	b=tam;
+	}
+//Truyền tham chiếu nghĩa là giá trị của biến thay đổi ngoài hàm. Ví dụ bạn bè vay tiền, mình đưa cả cái ví cho nó, có thể nó tiêu làm giảm tiền, có thể nó làm thêm nó nhét tiền vào làm tăng tiền
+void swap_thamchieu( int &a, int &b){
+	int tam=a;
+	a=b;
+   b=tam;
+	
+	}
+
+int main(){
+	int a, b;
+	printf("Nhap a va b: ");
+	scanf("%d%d", &a, &b);
+	printf("\na va b ban dau: %d, %d", a, b);
+	swap_thamtri(a, b);
+	printf("\nTruyen tham tri: a=%d, b=%d", a, b);
+	swap_thamchieu(a, b);
+	printf("\nTruyen tham chieu: a=%d, b=%d", a, b);
+	}
