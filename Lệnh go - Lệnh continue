@@ -1,0 +1,16 @@
+//in ra tất cả các số lẻ từ 0 đến n
+#include "stdio.h"
+int main(){
+	int n, i;
+	Nhap:
+	  printf("Nhap n: ");
+	  scanf("%d", &n);
+	if(n<0) goto Nhap;
+	printf("Day so le:");
+	for(i=0;i<=n;i++){
+		if(i%2==0) continue;
+	printf("\n %d", i);
+		}
+	// lệnh goto: nếu điều kiện đúng thì quay lại phần Nhap, nghĩa là số lẻ dương mới nhận   còn nếu số lẻ âm thì không nhận nên khi mà cho n<0 trong lệnh if thì nhập âm n bất kì thì sẽ là đúng nên thực hiện lại Nhap nhờ   lệnh goto, nhập bao giờ n là số dương thì thôi
+		
+		// lệnh continue dùng để loại những giá trị thoả mãn cái if trước nó, nếu điều kiện trong if đúng thì nó sẽ bỏ qua, tiếp     tục thực hiện những giá trị tiếp
