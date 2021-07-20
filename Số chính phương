@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+int ktraSCP( int x){
+	int khaican = (int) sqrt(x);
+	if(pow(khaican, 2)==x)
+	return 1;
+	else return 0;
+	}
+	
+int main(){
+	int n;
+	do{
+	printf("Nhap n: ");
+	scanf("%d", &n);
+	   }while(n<1);
+	   int i=2;
+	   for(;i<=n;i++){
+		    if(ktraSCP(i)==1){
+		      printf("\n%d", i); 
+            }
+	   }
+//tính tổng các số chính phương   
+int tong=0;
+	 for(int j=i;j<n;j++){
+	  	tong+=j;
+	 }
+	  printf("%d", tong);
+}
