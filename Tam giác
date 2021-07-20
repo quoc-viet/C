@@ -1,0 +1,46 @@
+#include "stdio.h"
+#include "math.h"
+int main(){
+	float xa, xb, xc, ya, yb, yc;
+	float AB, AC, BC, chuvi, dientich, p;
+	
+	printf("Nhap toa do A(xa;ya): ");
+	scanf("%f %f", &xa, &ya);
+	printf("Nhap toa do B(xb;yb): ");
+	scanf("%f %f", &xb, &yb);
+	printf("Nhap toa do C(xc;yc): ");
+	scanf("%f %f", &xc, &yc);
+
+	AB=sqrt( pow(xa-xb,2) + pow(ya-yb,2)  );
+	AC=sqrt( pow(xa-xc,2) + pow(ya-yc,2)  );
+	BC=sqrt( pow(xb-xc,2) + pow(yb-yc,2)  );
+	chuvi= AB+AC+BC;
+	p=chuvi/2;
+	dientich = sqrt(p*(p-AB)*(p-AC)*(p-BC));
+
+// kiem tra xem co phai tam giac khong
+	if(AB+AC>BC && AB+BC>AC && AC+BC>AB){
+		printf("ABC la tam giac");
+	 
+	  if(AB==AC||AB==BC||AC==BC){
+          printf("\nABC la tam giac can\n");
+         if(AB==AC){
+         	printf("ABC la tam giac can tai A");
+         }else if(AC==BC){
+         	printf("ABC la tam giac can tai C");
+         }else if(BC==AB){
+         	printf("ABC la tam giac can tai");
+         } 
+	  }
+	  
+    }else{
+        printf("ABC khong phai la tam giac");
+    break;
+	}	
+			
+//Chu vi
+printf("\nChu vi cua tam giac ABC la: %f",chuvi);
+// Dien tich
+printf("\nDien tich tam giac la: %.2f",dientich);	
+	}
+	
