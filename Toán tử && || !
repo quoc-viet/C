@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+	int a = 4>2;
+	int b = 7<10;
+	int c = 4>6;
+// nếu mà trong 2 cái có 1 cái sai thì sai	
+// 2 cái sai thì sai, 2 cái đúng thì đúng
+	printf("%d && %d = %d", a, b, a&&b);
+	printf("\n%d && %d = %d", a, c, a&&c);
+	printf("\n%d && %d = %d", c, b, c&&b);
+// nếu mà có 1 cái đúng thì đúng	
+// 2 cái sai thì sai, 2 cái đúng thì đúng
+	printf("\n%d || %d = %d", a, b, a||b);
+	printf("\n%d || %d = %d", b, c, b||c);
+	printf("\n%d || %d = %d", a, c, a||c);
+// nếu đúng thì thành sai, sai thành đúng 
+	printf("\n!%d = %d", a, !a);
+	printf("\n!%d = %d", b, !b);
+	printf("\n!%d = %d", c, !c);
+	}
