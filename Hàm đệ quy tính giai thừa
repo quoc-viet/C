@@ -1,0 +1,17 @@
+#include "stdio.h"
+int giaithua(int n){
+	if(n==1 || n==0)
+	   return 1;
+	else 
+	   return n*giaithua(n-1);
+	}
+int main(){
+	int n, gt;
+	printf("Nhap n: ");
+	scanf("%d", &n);
+	gt=giaithua(n);
+	printf("%d! = %d", n, gt);
+	}
+	
+	//hàm đệ quy dùng để gọi lại chính bản thân   nó, ví dụ như thực hiện 1 lần đến chỗ gọi  ra hàm đệ quy thì thực hiện tiếp từ đầu    bắt đầu với biến mới trong hàm gọi ra
+	//vd 3!=3*giaithua2=3*2*giaithua(1)
