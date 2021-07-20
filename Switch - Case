@@ -1,0 +1,39 @@
+// Nhập vào số từ 1 đến 7 hiển thị tương ứng tên thứ trong tuần
+#include <stdio.h>
+int main(){
+	int n;
+	printf("Nhap vao so n (tu 1 den 7) : ");
+	scanf("%d", &n);
+// Lệnh break dùng để kết thúc 1 vòng lặp, những cái sau lệnh break sẽ không được thực hiện	
+	switch(n){
+		
+		case 1:
+		  printf("Chu Nhat");
+		break;
+			
+		case 2:
+		  printf("Thu Hai");
+		break;
+			
+		case 3:
+		  printf("Thu Ba");
+		break;
+			
+		case 4:
+		  printf("Thu Tu");
+		break;
+			
+		case 5:
+		  printf("Thu Nam");
+		break;
+			
+		case 6:
+		  printf("Thu Sau");
+		break;
+			
+		case 7:
+		  printf("Thu Bay");
+		break;
+		}
+	
+	}
