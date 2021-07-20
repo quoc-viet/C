@@ -1,0 +1,23 @@
+#include "stdio.h"
+int main(){
+	
+	int a,b,UCLN;
+	printf("Nhap a va b: ");
+	scanf("%d%d", &a, &b);
+	
+if(a==0 || b==0){
+	printf("UCLN = %d", a+b);
+}else{
+ while(a!=b){
+   if(a>b){
+   	a=a-b;
+   }else{ 
+   	b=b-a;	
+   }
+    UCLN=a;
+}
+			printf("UCLN=%d",a);
+			}
+	
+	}
+// vòng while: nếu a≠b thì thực hiện câu lệnh trong vòng lặp, thực hiện bao giờ a=b(sai đk   trong while) thì dừng lại
